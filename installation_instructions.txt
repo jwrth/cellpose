@@ -4,8 +4,6 @@
 # 1. Github Desktop app: https://desktop.github.com/
 # 2. Anaconda: https://docs.anaconda.com/anaconda/install/windows/
 
-# The commands need to be run in the Anaconda prompt.
-
 ## Step 1: Clone github repository
 # 1. Open Github Desktop app
 # 2. Press CTRL+Shift+O
