@@ -1,0 +1,45 @@
+#### Cellpose installation commands
+
+# Following applications need to be installed:
+# 1. Github Desktop app: https://desktop.github.com/
+# 2. Anaconda: https://docs.anaconda.com/anaconda/install/windows/
+
+# The commands need to be run in the Anaconda prompt.
+
+## Step 1: Clone github repository
+# 1. Open Github Desktop app
+# 2. Press CTRL+Shift+O
+# 3. Change to "URL"
+# 4. Enter "https://github.com/MouseLand/cellpose.git" and click on "Clone"
+# Now the repository will be saved under "\Users\user.name\Documents\Github\cellpose"
+
+## Step 2: Install packages from environment file via anaconda prompt
+# Open the anaconda prompt by pressing the windows key and typing in "Anaconda Prompt"
+# Navigate to the repository
+cd \Users\<user.name>\Documents\GitHub\cellpose
+
+# Create environment and install packages from .yml
+conda env create -f environment.yml
+
+# Activate environment
+conda activate cellpose
+
+# To use JupyterLab or Jupyter Notebooks we need to install two more packages
+conda install jupyter
+pip install matplotlib
+
+# To upgrade cellpose you can run
+pip install cellpose --upgrade
+
+# If we want to run cellpose on CPU we are finished here and can run the GUI with following command
+python -m cellpose
+
+## (Optional) Step 3: Install GPU version
+# uninstall CPU version of torch and install GPU version
+pip uninstall torch
+conda install pytorch cudatoolkit=10.2 -c pytorch
+conda install -c anaconda cudatoolkit
+
+# to upgrade cellpose in the future you have to run following command instead of just 'pip install cellpose --upgrade' to prevent the CPU version getting installed again
+pip install --no-deps cellpose --upgrade
+
