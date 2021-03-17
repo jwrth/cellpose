@@ -24,11 +24,14 @@ conda activate cellpose
 
 # To use JupyterLab or Jupyter Notebooks we need to install two more packages
 conda install jupyter
-conda install -c conda-forge jupyterlab
+pip install jupyterlab
 pip install matplotlib
 
 # To upgrade cellpose you can run
 pip install cellpose --upgrade
+
+# install kernel for this environment
+python -m ipykernel install --user --name=cellpose_kernel
 
 # If we want to run cellpose on CPU we are finished here and can run the GUI with following command
 python -m cellpose
