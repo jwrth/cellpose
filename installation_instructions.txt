@@ -24,6 +24,7 @@ conda activate cellpose
 
 # To use JupyterLab or Jupyter Notebooks we need to install two more packages
 conda install jupyter
+conda install -c conda-forge jupyterlab
 pip install matplotlib
 
 # To upgrade cellpose you can run
